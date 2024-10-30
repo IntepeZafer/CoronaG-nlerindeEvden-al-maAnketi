@@ -1,0 +1,14 @@
+{
+  "name": "coronanketi",
+  "version": "1.0.0",
+  "description": "Bu Uygulama Çalışanların Korona Günlerinde Evden Mi Yoksa Ofisten Mi Çalışmak İstediğini Ölçen Bir Uygulama",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
