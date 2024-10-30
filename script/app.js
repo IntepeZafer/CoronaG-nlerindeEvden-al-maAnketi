@@ -1,7 +1,9 @@
 const questionForm = document.querySelector(".question-form");
+const result = document.querySelector(".result");
+const paragrafSpan = document.querySelector("p span");
 const correctAnswer = ["E","E","E","E"];
 let score = 0;
-
+let puan = 0;
 questionForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const userAnswer = [
@@ -15,5 +17,14 @@ questionForm.addEventListener("submit", (e) => {
             score += 25;
         }
     });
-    console.log(score)
-})
+    result.classList.remove("d-none");
+    
+    const setIntervalStart = setInterval(() => {
+        paragrafSpan.textContent = `${puan}%`;
+        if(puan === score){
+            clearInterval(setIntervalStart);
+        }else{
+            puan++;
+        }
+    } ,10);
+});
